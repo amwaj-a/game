@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Micron Js -->
+    <link
+      href="https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="home.css" />
+    <title>Games</title>
+  </head>
+  <body>
+    <section>
+      <h1>Letter Catcher</h1>
+      <img id="me" src="home1.png" alt="" srcset="" />
+
+      <button id="help" onclick="modal()" onmouseover="hover(this.id)">
+        How to play
+      </button>
+
+      <!-- <button>Easy</button>
+      <button>Mid</button> -->
+
+      <button id="play" onclick="play()" onmouseover="hover(this.id)">
+        Start Game
+      </button>
+    </section>
+    <div class="hidden modal">
+      <br />
+
+      <img class="helpImg" src="help.jpg" alt="" />
+
+      <p>
+        a word appears at the top, and letters fall down. You have to catch only
+        the letters that are part of the word. <br />
+        <span> Once you catch a correct letter, it appears at the top. </span>
+        When you complete the letters, you move to the next level.
+      </p>
+      <br /><br /><br />
+      <img src="help2.jpg" alt="" />
+
+      <p>
+        If you catch a letter not in the word, you have three attempts. If they
+        reach zero, you lose the game and return to the starting point.
+      </p>
+
+      <button id="back" onmouseover="hover(this.id)" onclick="hidd()">X</button>
+
+      <br />
+      <br />
+      <br />
+    </div>
+    <div class="hidden over"></div>
+    <script
+      src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      // document.body.style.height = window.innerHeight - 100;
+      let me = document.querySelector("#me");
+
+      let over = document.querySelector(".over");
+      let modal1 = document.querySelector(".modal");
+      function modal() {
+        over.classList.remove("hidden");
+        modal1.classList.remove("hidden");
+      }
+      function hidd() {
+        over.classList.add("hidden");
+        modal1.classList.add("hidden");
+      }
+      function hover(id) {
+        micron
+          .getEle("#" + id)
+          .interaction("shake")
+          .duration(".5");
+      }
+      function play() {
+        window.location.href = "games.html";
+      }
+      setInterval((e) => {
+        // me.style.transform=
+        // 'scale(1)';
+        // setTimeout(()=>{
+        //   me.style.transform=
+        //   'scale(1.01)'
+        // },500)
+        // micron.getEle("#me").
+      }, 900);
+    </script>
+    <!-- <script src="secript.js"></script> -->
+  </body>
+</html>
