@@ -158,7 +158,17 @@ hr{
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
 }
-
+.btnArrow img{
+  width: 50%;
+  /* border: 1px solid red; */
+}
+.btnArrow{
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  max-width: 30vw;
+}
 section{
   display: flex;
   justify-content: center;
@@ -219,7 +229,10 @@ canvas{
   height: 3vh;
   width: 4vw;
 }
+.btnArrow{
+    display: flex;
 
+}
 
 
 /* .modalWin img{

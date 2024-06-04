@@ -219,7 +219,27 @@ function isCatch(lett, parents = "") {
 }
 
 // ----------------- move-------------------
+function move(arrow) {
+  person.style.width = personSize + "vw";
+  //   console.log(count);
+  if (arrow == "ArrowRight") {
+    person.src = "carecter.png";
 
+    count >= width - 100 ? (count = width - 100) : (count += 100);
+
+    gsap.to(
+      ".box",
+
+      { x: count, duration: 1 }
+    );
+  } else if (arrow == "ArrowLeft") {
+    person.src = "carecterLeft.png";
+
+    count < 100 ? (count = 0) : (count -= 100);
+
+    gsap.to(".box", { x: count, duration: 1 });
+  }
+}
 window.addEventListener("keydown", down);
 function down(params) {
   person.style.width = personSize + "vw";
