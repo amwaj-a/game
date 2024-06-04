@@ -59,9 +59,12 @@ body {
     padding: 10px;
     border-radius: 4px;
     margin: 20px;
-    height: 70vh;
+    /* height: 70vh; */
     width: 70vw;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     /* background-color:rgb(55, 61, 46);
     color: rgb(169, 168, 168); */
     color:rgb(55, 61, 46);
@@ -73,7 +76,9 @@ body {
     position: absolute;
     z-index: 2;
   }
-
+.helpWin ,.helplost{
+    display: flex;
+}
   .hidden {
     display: none;
   }
@@ -100,7 +105,7 @@ color: aliceblue;
   img {
     /* width: 40%; */
     /* border: 1px solid red; */
-    float: right;
+    /* float: right; */
   }
 
   p {
@@ -129,16 +134,17 @@ color: aliceblue;
     img {
       width: 100%;
     }
-
+    .helpWin ,.helplost{
+        display: block;
+    }
     section {
       width: 70vw;
       padding: 20px;
     }
 
     .modal {
-      background-color: #a660a0;
+      /* background-color: #a660a0; */
       /* background: linear-gradient(#ba79ec,#693665); */
-
       margin: 0px;
       width: 90vw;
     }

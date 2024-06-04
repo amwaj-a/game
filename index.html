@@ -30,29 +30,24 @@
       </button>
     </section>
     <div class="hidden modal">
-      <br />
-
-      <img class="helpImg" src="help.jpg" alt="" />
-
-      <p>
-        a word appears at the top, and letters fall down. You have to catch only
-        the letters that are part of the word. <br />
-        <span> Once you catch a correct letter, it appears at the top. </span>
-        When you complete the letters, you move to the next level.
-      </p>
-      <br /><br /><br />
-      <img src="help2.jpg" alt="" />
-
-      <p>
-        If you catch a letter not in the word, you have three attempts. If they
-        reach zero, you lose the game and return to the starting point.
-      </p>
-
+      <div class="helpWin">
+        <p>
+          a word appears at the top, and letters fall down. You have to catch
+          only the letters that are part of the word. <br />
+          <span> Once you catch a correct letter, it appears at the top. </span>
+          When you complete the letters, you move to the next level.
+        </p>
+        <img class="helpImg" src="help.jpg" alt="" />
+      </div>
       <button id="back" onmouseover="hover(this.id)" onclick="hidd()">X</button>
 
-      <br />
-      <br />
-      <br />
+      <div class="helplost">
+        <p>
+          If you catch a letter not in the word, you have three attempts. If
+          they reach zero, you lose the game and return to the starting point.
+        </p>
+        <img src="help2.jpg" alt="" />
+      </div>
     </div>
     <div class="hidden over"></div>
     <script
